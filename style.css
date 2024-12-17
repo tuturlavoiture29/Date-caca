@@ -4,13 +4,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(120deg, #f6d365, #fda085);
+  background: linear-gradient(120deg, #f8cbdb, #fd6c9e);
   margin: 0;
 }
 
 .container {
   text-align: center;
-  background: white;
+  background: #E6E6FA;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -47,3 +47,20 @@ button:hover {
   font-weight: bold;
   margin-top: 10px;
 }
+
+.big-image {
+  position: absolute; /* Position libre */
+  top: 50%; /* Centre verticalement */
+  transform: translateY(-50%); /* Ajustement vertical */
+  width: 320px; /* Taille commune pour toutes les images */
+  height: auto;
+}
+
+.little-image {
+  position: absolute; /* Position libre */
+  top: 50%; /* Centre verticalement */
+  transform: translateY(-50%); /* Ajustement vertical */
+  width: 120px; /* Taille commune pour toutes les images */
+  height: auto;
+}
+
