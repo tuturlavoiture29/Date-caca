@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choix de la musique</title>
+  <link rel="stylesheet" href="style.css"> <!-- Réutilisation de ton style existant -->
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #f8cbdb, #fd6c9e);
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .music-container {
+      background: #f3f3ff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column; /* Met les enfants en colonne */
+      gap: 20px; /* Espacement entre les boutons */
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 60%; /* Contrôle la largeur des boutons */
+      margin: 0 auto; /* Centre horizontalement */
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="music-container">
+    <h1>Choisis ta musique pour t'accompagner 🎵</h1>
+    <button onclick="chooseMusicAndRedirect('goofy')">Musique drôle</button>
+    <button onclick="chooseMusicAndRedirect('romantique')">Musique romantique</button>
+    <button onclick="chooseMusicAndRedirect('girly')">Musique girly</button>
+  </div>
+
+  <script>
+    // Fonction pour choisir la musique et rediriger vers page4
+    function chooseMusicAndRedirect(musicKey) {
+      localStorage.setItem('selectedMusic', musicKey); // Stocke le choix de musique
+      window.location.href = 'page4.html'; // Redirige vers page4
+    }
+  </script>
+</body>
+</html>

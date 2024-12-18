@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenue !</title>
+  <link rel="stylesheet" href="style.css"> <!-- On réutilise le CSS existant -->
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 Bienvenue sur la page secrète ! 🌟</h1>
+    <p>Bravo, tu as trouvé le mot de passe ! 🎉</p>
+    <p>Maintenant, prépare-toi pour notre date… 😘</p>
+    <a href="invitation.html" class="button">Voir les détails de l'invitation</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauvaise Réponse</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url('Images/fullofprout.jpeg') no-repeat center center fixed;
+      background-size: contain; /* L'image reste entièrement visible */
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      padding: 15px 30px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background-color: #ff1493;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <!-- Bouton pour revenir à page4 -->
+  <button onclick="window.location.href='page4.html'">Mauvaise réponse grosse nullos</button>
+
+
+  <script>
+    localStorage.setItem('startTime', 10); // Début à 30 secondes
+  </script>
+
+  <!-- Iframe pour conserver la musique -->
+  <iframe src="player.html" style="display: none;"></iframe>
+</body>
+</html>

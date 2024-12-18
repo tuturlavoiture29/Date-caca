@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À ton avis ?</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(120deg, #f8cbdb, #fd6c9e);
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      max-width: 800px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    .question {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 5px solid #ff69b4;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .option {
+      background: #ff69b4;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      padding: 15px 30px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .option:hover {
+      background: #ff1493;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <!-- Question -->
+    <div class="question">À ton avis, qu'est-ce que cette personne a envie de manger ?</div>
+    <!-- Photo -->
+    <img src="Images/me.jpg" alt="Photo de moi" class="photo">
+    <!-- Réponses -->
+    <div class="options">
+      <button class="option" onclick="redirectToError()">Du caca</button>
+      <button class="option" onclick="redirectToError()">Des pâtes fraiches au foie gras aux magrets et aux truffes</button>
+      <button class="option" onclick="redirectToError()">Full of prout</button>
+      <button class="option" onclick="redirectToNext()">Toi</button>
+    </div>
+  </div>
+
+  <!-- Iframe pour conserver la musique -->
+  <script>
+    // Définir le temps de départ pour cette page
+    localStorage.setItem('startTime', 15); // La musique démarre à 15 secondes
+  </script>
+  <iframe src="player.html" style="display: none;"></iframe>
+
+  <script>
+    // Redirection vers les pages
+    function redirectToError() {
+      window.location.href = 'error2.html';
+    }
+
+    function redirectToNext() {
+      window.location.href = 'page6.html';
+    }
+  </script>
+</body>
+</html>

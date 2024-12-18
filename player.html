@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecteur de musique</title>
+</head>
+<body>
+  <!-- Lecteur audio -->
+  <audio id="music-player" autoplay loop>
+    Votre navigateur ne supporte pas l'élément audio.
+  </audio>
+
+  <script>
+    const player = document.getElementById('music-player');
+
+    // Récupérer le fichier musical sélectionné
+    const selectedMusic = localStorage.getItem('selectedMusic') || 'goofy';
+    const startTime = localStorage.getItem('startTime') || 0; // Temps de début par défaut : 0
+
+    // Définir la source du lecteur
+    player.src = `Music/${selectedMusic}.mp3`;
+
+    // Jouer la musique à la position définie
+    player.addEventListener('loadedmetadata', () => {
+      player.currentTime = parseFloat(startTime); // Position en secondes
+      player.play().catch(err => console.error("Erreur de lecture :", err));
+    });
+
+    // Sauvegarder la position actuelle
+    player.addEventListener('timeupdate', () => {
+      localStorage.setItem('musicTime', player.currentTime);
+    });
+  </script>
+</body>
+</html>
